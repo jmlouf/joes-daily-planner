@@ -1,60 +1,78 @@
+header {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 2%;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
 }
-  
+
 textarea {
     background: transparent;
     border: none;
-    resize: none;
+    resize: vertical;
     color: #000000;
-    border-left: 1px solid black;
-    padding: 10px;
+    padding: 1px;
+    width: 100%;
 }
-  
-.description {
+
+h1 {
+    font-size: 350%;
+    font-weight: 400;
+}
+
+hr {
+    border: 2px solid black;
+}
+
+.input {
     white-space: pre-wrap;
+    background-color: transparent;
 }
   
 .time-block {
-    border-radius: 15px;
+    border-radius: 100px;
+    height: auto;
 }
   
 .row {
-    border-top: 1px solid white;
+    box-shadow: 4px 4px 8px 2px grey;
+    height: auto;
+    width: 100%;
+    padding: 2%;
 }
-  
+
 .hour {
-    background-color: #ffffff;
+    background-color: #ffffff00;
     color: #000000;
-    border-top: 1px dashed #000000;
 }
-  
+
 .past {
-    background-color: grey;
+    background-color: #ececec;
     color: white;
 }
   
 .present {
-    background-color: red;
+    background-color: #eda489;
     color: white;
 }
-  
+
 .future {
-    background-color: green;
+    background-color: #a7d7c5;
     color: white;
 }
   
 .saveBtn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06aed5;
-    color: white;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
 }
   
-.saveBtn i:hover {
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
+.saveBtn span:hover {
+    font-size: 30px;
+    transition: all 0.1s ease-in-out;
 }
-  
