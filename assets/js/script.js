@@ -1,11 +1,16 @@
 $(function() {
 
+    // Using jQuery to select all .saveBtn elements and store them in variable.
     var saveBtn = $(".saveBtn");
 
+    // Get the current date and format using DayJS.
     var now = dayjs();
     var currentDay = now.format('dddd, MMMM D, YYYY');
+
+    // Display the current reformatted date.
     $('#current-day').text(currentDay);
     
+    // Get the current hour using DayJS.
     var currentHour = dayjs().hour();
 
 
@@ -14,8 +19,12 @@ $(function() {
         // Loop through each time-block hour
         $(".time-block").each(function() {
 
+            // Parse through each time-block hour to receive the hour and compare
+            // it to the cuurent hour.
             var timeblockHour = parseInt($(this).attr("id").split("hour-")[1]);
           
+            // Add/remove class depending on the time-block hour compared to the
+            // current hour comparison.
             if (timeblockHour < currentHour) {
                 $(this).removeClass("present");
                 $(this).removeClass("future");
@@ -33,7 +42,8 @@ $(function() {
     
     }
 
-
+    
+    // Set the input value that corresponds to the designated hour-block id.
     saveBtn.on("click", function() {
 
         var hourX = $(this).parent().attr("id").split("hour-")[1];
@@ -65,16 +75,8 @@ $(function() {
     }
   
 
-    // Call loadSavedText function when page loads.
+    // Call loadSavedText and colorCode functions when page loads.
     loadSavedText();
     colorCode();
-
-
-    setInterval(function() {
-        
-        if (now.minute() === 0 && now.second() === 0) {
-          colorCode();
-        }  
-    }, 1000);
     
 });

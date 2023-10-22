@@ -1,3 +1,4 @@
+/* Added new font to both the header and body. */
 header {
     font-family: 'IBM Plex Sans', sans-serif;
     padding: 2%;
@@ -8,6 +9,10 @@ body {
     font-size: 16px;
 }
 
+/* <textarea> is transparent to show current
+time-block. */
+/* Vertical resize added to allow user to display
+all input easily. */
 textarea {
     background: transparent;
     border: none;
@@ -26,16 +31,20 @@ hr {
     border: 2px solid black;
 }
 
+/* Inpout is transparent to show current
+time-block. */
 .input {
     white-space: pre-wrap;
     background-color: transparent;
 }
-  
+
+/* Rounded out the edges for style. */
 .time-block {
     border-radius: 100px;
     height: auto;
 }
-  
+
+/* Box shadow for style. */
 .row {
     box-shadow: 4px 4px 8px 2px grey;
     height: auto;
@@ -71,7 +80,7 @@ hr {
     background-color: #ffffff00;
     color: rgb(0, 0, 0);
 }
-  
+
 .saveBtn span:hover {
     font-size: 30px;
     transition: all 0.1s ease-in-out;
