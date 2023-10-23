@@ -1,4 +1,4 @@
-$(document.ready(function() {
+$(function() {
 
     // Using jQuery to select all .saveBtn elements and store them in variable.
     var saveBtn = $(".saveBtn");
@@ -83,4 +83,4 @@ $(document.ready(function() {
     // Calls the colorCode function every 0.5 seconds.
     setInterval(colorCode, 500);
 
-}));
+});
