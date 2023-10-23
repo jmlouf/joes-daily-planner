@@ -1,4 +1,4 @@
-$(function() {
+$(document.ready(function() {
 
     // Using jQuery to select all .saveBtn elements and store them in variable.
     var saveBtn = $(".saveBtn");
@@ -42,8 +42,8 @@ $(function() {
         });
     
     }
-
     
+
     // Set the input value that corresponds to the designated hour-block id.
     saveBtn.on("click", function() {
 
@@ -51,7 +51,7 @@ $(function() {
         var input = $(this).siblings(".input").val();
       
         localStorage.setItem(hourX, input);
-      
+
     });
 
 
@@ -83,4 +83,4 @@ $(function() {
     // Calls the colorCode function every 0.5 seconds.
     setInterval(colorCode, 500);
 
-});
+}));
