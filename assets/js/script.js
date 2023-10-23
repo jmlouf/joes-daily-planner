@@ -76,11 +76,11 @@ $(function() {
     }
   
 
-    // Call loadSavedText and colorCode functions when page loads.
+    // Calls loadSavedText and colorCode functions when page loads.
     loadSavedText();
     colorCode();
 
-    // Calls the colorCode function every second.
-    setInterval(colorCode, 1000);
+    // Calls the colorCode function every 0.5 seconds.
+    setInterval(colorCode, 500);
 
 });

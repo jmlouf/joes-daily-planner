@@ -40,7 +40,7 @@ time-block. */
 
 /* Rounded out the edges for style. */
 .time-block {
-    border-radius: 35px;
+    border-radius: 30px;
     height: auto;
 }
 
@@ -49,7 +49,7 @@ time-block. */
     box-shadow: 4px 4px 8px 2px grey;
     height: auto;
     width: 100%;
-    padding: 2%;
+    padding: 1%;
 }
 
 .hour {
@@ -89,7 +89,7 @@ time-block. */
 
     /* Reduced font size, reduced padding for
     time-blocks, adjusted font size for time-blocks,
-    input, and buttons. */
+    input, reduced border radius, and buttons. */
     header {
         font-size: 20px;
     }
@@ -97,10 +97,14 @@ time-block. */
         min-width: 20%;
     }
     .time-block {
-        padding: 1%;
+        padding: 2%;
         margin: 0 auto;
+        border-radius: 22px;
     }
     .hour, .input, .saveBtn {
         font-size: 14px;
+    }
+    .saveBtn {
+        border-radius: 18px;
     }
 }
