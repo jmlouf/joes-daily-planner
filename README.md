@@ -1,50 +1,37 @@
-# Project Name
+# Joe's Daily Planner
 
 ## Description
 
-[Write me a brief description section and usage section for the following code:
+This is a daily planner application that allows a user to save events for each hour of the work day.
 
-<insert code>]
+It uses jQuery and DayJS to dynamically update the UI and save/load data from localStorage.
 
-This code generates a random password based on user input for length and character types.
+Here is an overview of what it is doing:
 
-It first defines some global variables to reference the HTML elements for the "Generate" and rer"Re-roll" buttons, as well as variables to store the password length and character types.
+- On page load, it gets the current date with DayJS and displays it in the header. 
+- The colorCode() function loops through each timeblock, compares its ID to the current hour, and sets a color-coded class based on past/present/future.
+- When the save button is clicked, it saves the input text to localStorage using the timeblock ID. 
+- The loadSavedText() function retrieves any saved data from localStorage and sets the timeblock input values.
+- colorCode() and loadSavedText() are called on page load to initialize the data and styling.
+- colorCode() is also set on a 1 second interval to persistently update the styles as time passes.
 
-The getLength() function prompts the user for the password length and validates it is between 8 and 128 characters. The getCharTypes() function prompts the user to select character types for the password and validates at least one is chosen.
-
-The generatePassword() function contains the logic to randomly generate a password string using the global length and types variables. It defines character pools for each type, gets a random character from the appropriate pool based on the selected types, and concatenates them to build the password.
-
-The writePassword() function calls the prompt functions, generates the password, and updates the #password element with the generated password.
-
-The rewritePassword() function regenerates a new password using the same password criteria, length and character types, without reprompting the user. It is called when the "Re-roll" button is clicked.
-
-Event listeners are added to call the functions when the buttons are clicked.
-
-Hopefully, this code will be put to good use with all the useless accounts that I have...
+This provides a simple daily planner interface and functionality using jQuery, DayJS, color-coding, and localStorage to handle the data.
 
 ## Usage
 
-[Write me a brief description section and usage section for the following code:
+This simple calendar application allows the user to save events for each hour of the day.
 
-<insert code>]
+To use this planner:
 
-To use the random password generator:
+- The current day is displayed at the top of the calendar.
+- Timeblocks for standard business hours are shown.
+- Each timeblock is color coded to indicate whether it is in the past, present, or future.
+- Click into a timeblock and enter an event.
+- Click the save button for that timeblock to save the text in local storage.
+- Saved events persist when the page is refreshed.
+- The calendar automatically updates the timeblocks to change color based on the current time.
 
-1. Load the page containing the HTML input and buttons.
-2. Click the "Generate" button.
-3. When prompted, enter the desired password length (8-128 characters) and select the types of characters to include.
-4. A random password matching the selected criteria will be generated and populated into the password input field.
-5. If unhappy with the generated password, click the "Reroll" button to generate a new random password with the same criteria.
-6. The password can then be copied from the input field for use.
-
-Some usage notes:
-
-- The prompted criteria will be remembered between generations in the current session. Refreshing the page will reset them.
-- At least one character type must be selected when prompted.
-- The generator includes lowercase, uppercase, numbers, and special characters.
-- Clicking "Re-roll" will generate a new password matching the previous criteria, lenth and character types.
-
-So in summary, generate a custom password, re-roll it, and copy it!
+This app demonstrates use of jQuery, DayJS, color-coded classes, and localStorage to create a practical daily planner application. Timeblocks update in real-time to indicate the current hour and saved events stay in the user's browser.
 
 ## Screenshots
 
@@ -52,11 +39,10 @@ The following image demonstrates the web application's appearance and functional
 
 ![Alt text](./assets/images/mockup-1.png)
 ![Alt text](./assets/images/mockup-2.png)
-![Alt text](./assets/images/mockup-3.png)
 
 ## Deployment Link
 
-https://jmlouf.github.io/password-generator/
+https://jmlouf.github.io/joes-daily-planner/
 
 ## Credits
 
@@ -66,9 +52,13 @@ The following resources were utilized:
 
 - KU Coding Bootcamp Spot - Provided project requirements and guidelines.
 - W3Schools - General reference for HTML, CSS and JavaScript.
-- Tech with Tim - YouTube channel with web development tutorials.
-- freeCodeCamp.org - Reference for JavaScript concepts and best practices.
-- https://owasp.org/www-community/password-special-characters – A list of password special characters.
+- Bootstrap - Referenced for general CSS documentation.
+- MDN Web Docs - Referenced for CSS styling and JavaScript documentation.
+- Stack Overflow - Referenced for general JavaScript documentation.
+- SheCodes - Referenced for past, present, and future color palettes.
+- Google Fonts - Referenced for header/body font style and submit button icon.
+- GeeksForGeeks - Referenced for automatic refreshing of JavaScript function.
+- Tweek.so - Referenced for planner layout and style.
 
 ## License
 
