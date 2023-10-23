@@ -99,7 +99,7 @@ time-block. */
     .time-block {
         padding: 2%;
         margin: 0 auto;
-        border-radius: 22px;
+        border-radius: 25px;
     }
     .hour, .input, .saveBtn {
         font-size: 14px;
