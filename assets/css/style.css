@@ -73,8 +73,7 @@ time-block. */
 }
   
 .saveBtn {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     background-color: #ffffff00;
     color: rgb(0, 0, 0);
 }
@@ -82,4 +81,26 @@ time-block. */
 .saveBtn span:hover {
     font-size: 30px;
     transition: all 0.1s ease-in-out;
+}
+
+/* Media query for screens with a maximum width of 
+768px */
+@media (max-width: 768px) {
+
+    /* Reduced font size, reduced padding for
+    time-blocks, adjusted font size for time-blocks,
+    input, and buttons. */
+    header {
+        font-size: 20px;
+    }
+    body {
+        min-width: 20%;
+    }
+    .time-block {
+        padding: 1%;
+        margin: 0 auto;
+    }
+    .hour, .input, .saveBtn {
+        font-size: 14px;
+    }
 }
