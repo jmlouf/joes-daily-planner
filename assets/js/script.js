@@ -23,9 +23,6 @@ $(function() {
             
             // Get the current hour with DayJS.
             var currentHour = dayjs().hour();
-          
-            console.log(timeblockHour);
-            console.log(currentHour);
 
             // Add/remove class depending on the time-block hour compared to the
             // current hour comparison.
