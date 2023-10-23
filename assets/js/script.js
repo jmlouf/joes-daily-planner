@@ -3,17 +3,15 @@ $(function() {
     // Using jQuery to select all .saveBtn elements and store them in variable.
     var saveBtn = $(".saveBtn");
 
-    // Get the current date and format using DayJS.
+    // Get the current date and format with DayJS.
     var now = dayjs();
     var currentDay = now.format('dddd, MMMM D, YYYY');
 
     // Display the current reformatted date.
     $('#current-day').text(currentDay);
-    
-    // Get the current hour using DayJS.
-    var currentHour = dayjs().hour();
 
 
+    // Function to match colors with corresponding time-blocks.
     function colorCode() {
 
         // Loop through each time-block hour
@@ -22,7 +20,13 @@ $(function() {
             // Parse through each time-block hour to receive the hour and compare
             // it to the cuurent hour.
             var timeblockHour = parseInt($(this).attr("id").split("hour-")[1]);
+            
+            // Get the current hour with DayJS.
+            var currentHour = dayjs().hour();
           
+            console.log(timeblockHour);
+            console.log(currentHour);
+
             // Add/remove class depending on the time-block hour compared to the
             // current hour comparison.
             if (timeblockHour < currentHour) {
@@ -78,5 +82,8 @@ $(function() {
     // Call loadSavedText and colorCode functions when page loads.
     loadSavedText();
     colorCode();
-    
+
+    // Calls the colorCode function every second.
+    setInterval(colorCode, 1000);
+
 });

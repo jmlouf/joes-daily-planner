@@ -40,7 +40,7 @@ time-block. */
 
 /* Rounded out the edges for style. */
 .time-block {
-    border-radius: 100px;
+    border-radius: 35px;
     height: auto;
 }
 
@@ -73,10 +73,8 @@ time-block. */
 }
   
 .saveBtn {
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-top-left-radius: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: #ffffff00;
     color: rgb(0, 0, 0);
 }
